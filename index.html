@@ -1,209 +1,281 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Explore World Travel</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Belbase Tours & Travels</title>
+
 <style>
-body{
-font-family: Arial;
-margin:0;
-background:#f4f4f4;
+/* GENERAL STYLES */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f4f4;
 }
 
-header{
-background:#0099cc;
-color:white;
-padding:20px;
-text-align:center;
+header {
+  background: #0066cc;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
-nav{
-background:#333;
-padding:10px;
-text-align:center;
+nav {
+  background: #333;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-nav a{
-color:white;
-margin:15px;
-text-decoration:none;
-font-size:18px;
+nav a {
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 18px;
 }
 
-.hero{
-background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
-height:400px;
-background-size:cover;
-display:flex;
-align-items:center;
-justify-content:center;
-color:white;
-font-size:40px;
-font-weight:bold;
+nav a:hover {
+  background: #555;
+  border-radius: 5px;
 }
 
-.container{
-padding:40px;
-text-align:center;
+.hero {
+  background: url("https://images.unsplash.com/photo-1549893074-4bc9a2f07a8c") center/cover no-repeat;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #000;
 }
 
-.card{
-display:inline-block;
-width:250px;
-margin:20px;
-background:white;
-padding:20px;
-box-shadow:0 0 10px gray;
+.container {
+  padding: 40px;
+  text-align: center;
 }
 
-footer{
-background:#222;
-color:white;
-text-align:center;
-padding:15px;
-margin-top:40px;
+/* CARDS */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  width: 260px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px gray;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 10px 0 5px 0;
+}
+
+.card p {
+  margin: 5px 10px;
+}
+
+button {
+  background: #0066cc;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #004a99;
+}
+
+/* BOOKING FORM */
+#bookingSection {
+  display: none;
+  padding: 40px;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+#bookingForm input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+#bookingForm button {
+  width: 50%;
+}
+
+/* CONTACT SECTION */
+.contact {
+  background: #222;
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+.contact p {
+  margin: 8px 0;
+}
+
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+section h2 {
+  margin-bottom: 30px;
+}
+
+/* ABOUT US */
+.about {
+  background: #e2e2e2;
+  padding: 40px;
 }
 </style>
 </head>
-
 <body>
 
 <header>
-<h1>Explore World Travel</h1>
-<p>Your Journey Begins Here</p>
+<h1>Belbase Tours & Travels</h1>
+<p>Explore the Beauty of Nepal</p>
 </header>
 
 <nav>
-<a href="#">Home</a>
-<a href="#">Destinations</a>
-<a href="#">Packages</a>
-<a href="#">Contact</a>
+<a href="#home">Home</a>
+<a href="#destinations">Destinations</a>
+<a href="#booking">Booking</a>
+<a href="#about">About Us</a>
+<a href="#contact">Contact</a>
 </nav>
 
-<div class="hero">
-Discover Beautiful Places
+<div id="home" class="hero">
+Discover Nepal
 </div>
 
-<div class="container">
-
-<h2>Popular Destinations</h2>
-
-<div class="card">
-<h3>Paris</h3>
-<p>Enjoy the city of lights and romance.</p>
-</div>
+<!-- DESTINATIONS -->
+<section id="destinations" class="container">
+<h2>Top Destinations in Nepal</h2>
+<div class="cards">
 
 <div class="card">
-<h3>Bali</h3>
-<p>Relax on beautiful tropical beaches.</p>
+<img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa" alt="Everest Base Camp">
+<h3>Everest Base Camp</h3>
+<p>12 Days Trek in Everest Region</p>
+<button onclick="showBookingForm('Everest Base Camp')">Book Now</button>
 </div>
 
 <div class="card">
-<h3>Dubai</h3>
-<p>Experience luxury and adventure.</p>
+<img src="https://images.unsplash.com/photo-1605640840605-14ac1855827b" alt="Annapurna Base Camp">
+<h3>Annapurna Base Camp</h3>
+<p>10 Days Trek in Annapurna Region</p>
+<button onclick="showBookingForm('Annapurna Base Camp')">Book Now</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1583930579670-93579f7c4b65" alt="Pokhara">
+<h3>Pokhara</h3>
+<p>Lakeside City with Phewa Lake</p>
+<button onclick="showBookingForm('Pokhara')">Book Now</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1587474260584-136574528ed5" alt="Chitwan National Park">
+<h3>Chitwan National Park</h3>
+<p>Wildlife Safari & Jungle Experience</p>
+<button onclick="showBookingForm('Chitwan National Park')">Book Now</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1593691509543-c55fb32b0c6c" alt="Lumbini">
+<h3>Lumbini</h3>
+<p>Birthplace of Lord Buddha</p>
+<button onclick="showBookingForm('Lumbini')">Book Now</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1578898886781-c558ab4f1124" alt="Mustang">
+<h3>Mustang</h3>
+<p>Explore the Hidden Kingdom</p>
+<button onclick="showBookingForm('Mustang')">Book Now</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1603094459794-756512420a2a" alt="Rara Lake">
+<h3>Rara Lake</h3>
+<p>Serene Lake in Remote Nepal</p>
+<button onclick="showBookingForm('Rara Lake')">Book Now</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1618059357215-3cbfc3de2d25" alt="Tilicho Lake">
+<h3>Tilicho Lake</h3>
+<p>High Altitude Himalayan Lake</p>
+<button onclick="showBookingForm('Tilicho Lake')">Book Now</button>
 </div>
 
 </div>
+</section>
+
+<!-- BOOKING FORM -->
+<section id="booking" class="container">
+<h2>Book Your Tour</h2>
+<div id="bookingSection">
+<form id="bookingForm">
+<input type="text" id="name" placeholder="Your Name" required><br>
+<input type="email" id="email" placeholder="Your Email" required><br>
+<input type="text" id="destination" placeholder="Destination" readonly><br>
+<input type="date" id="date" required><br>
+<button type="submit">Submit Booking</button>
+</form>
+</div>
+</section>
+
+<!-- ABOUT US -->
+<section id="about" class="about">
+<h2>About Us</h2>
+<p>Belbase Tours & Travels is a trusted travel agency based in Nepal, specializing in treks, tours, and adventure experiences across the Himalayas. Our mission is to provide unforgettable journeys with safety, comfort, and local expertise.</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+<h2>Contact Us</h2>
+<p>📞 Phone: 9744238696</p>
+<p>📧 Email: belbase@company.com</p>
+<p>📍 Location: Nepal</p>
+</section>
 
 <footer>
-<p>© 2026 Explore World Travel</p>
+<p>© 2026 Belbase Tours & Travels | All Rights Reserved</p>
 </footer>
+
+<script>
+function showBookingForm(destination) {
+  document.getElementById('bookingSection').style.display = 'block';
+  document.getElementById('destination').value = destination;
+}
+
+document.getElementById('bookingForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert("Thank you " + document.getElementById('name').value + "! Your booking for " + document.getElementById('destination').value + " has been received. We will contact you shortly.");
+  document.getElementById('bookingForm').reset();
+  document.getElementById('bookingSection').style.display = 'none';
+});
+</script>
 
 </body>
 </html>
-<section style="padding:40px;text-align:center;">
-<h2>Tour Packages</h2>
-
-<div style="display:flex;justify-content:center;flex-wrap:wrap;gap:20px;">
-
-<div style="border:1px solid #ccc;padding:20px;width:250px;border-radius:10px;">
-<h3>Paris, France</h3>
-<p>5 Days / 4 Nights</p>
-<p><b>Price: $1200</b></p>
-<button>Book Now</button>
-</div>
-
-<div style="border:1px solid #ccc;padding:20px;width:250px;border-radius:10px;">
-<h3>Bali, Indonesia</h3>
-<p>6 Days / 5 Nights</p>
-<p><b>Price: $950</b></p>
-<button>Book Now</button>
-</div>
-
-<div style="border:1px solid #ccc;padding:20px;width:250px;border-radius:10px;">
-<h3>Dubai, UAE</h3>
-<p>4 Days / 3 Nights</p>
-<p><b>Price: $800</b></p>
-<button>Book Now</button>
-</div>
-
-<div style="border:1px solid #ccc;padding:20px;width:250px;border-radius:10px;">
-<h3>Maldives</h3>
-<p>3 Days / 2 Nights</p>
-<p><b>Price: $1500</b></p>
-<button>Book Now</button>
-</div>
-<div style="border:1px solid #ccc;width:260px;border-radius:10px;overflow:hidden;">
-<img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa" width="100%">
-<h3>नेपाल (काठमाडौँ / पोखरा)</h3>
-<p>५ दिन / ४ रात</p>
-<p><b>मूल्य: $600</b></p>
-<button onclick="showForm()">बुक गर्नुहोस्</button>
-</div>
-</div>
-</section>
-<section style="padding:40px;text-align:center;">
-<h2>Popular Tour Packages</h2>
-
-<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;">
-
-<div style="border:1px solid #ccc;width:260px;border-radius:10px;overflow:hidden;">
-<img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" width="100%">
-<h3>Paris</h3>
-<p>5 Days / 4 Nights</p>
-<p><b>Price: $1200</b></p>
-<button onclick="showForm()">Book Now</button>
-</div>
-
-<div style="border:1px solid #ccc;width:260px;border-radius:10px;overflow:hidden;">
-<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" width="100%">
-<h3>Bali</h3>
-<p>6 Days / 5 Nights</p>
-<p><b>Price: $950</b></p>
-<button onclick="showForm()">Book Now</button>
-</div>
-
-<div style="border:1px solid #ccc;width:260px;border-radius:10px;overflow:hidden;">
-<img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c" width="100%">
-<h3>Dubai</h3>
-<p>4 Days / 3 Nights</p>
-<p><b>Price: $800</b></p>
-<button onclick="showForm()">Book Now</button>
-</div>
-
-</div>
-</section>
-<div id="bookingForm" style="display:none;padding:40px;text-align:center;background:#f4f4f4;">
-<h2>Book Your Tour</h2>
-
-<form>
-<input type="text" placeholder="Your Name" required><br><br>
-<input type="email" placeholder="Your Email" required><br><br>
-<input type="text" placeholder="Destination"><br><br>
-<input type="date"><br><br>
-
-<button type="submit">Submit Booking</button>
-</form>
-
-  </div>
-<script>
-function showForm(){
-document.getElementById("bookingForm").style.display="block";
-}
-</script>
-<section style="padding:40px;background:#f4f4f4;text-align:center;">
-<h2>contact</h2>
-<p><b>Sagarmatha Tour and Travels</b></p>
-<p>phone: +977-9744238696</p>
-<p>email: sagarmathatravels@gmail.com</p>
-<p>adress:Butwal , Nepal</p>
-</section>
